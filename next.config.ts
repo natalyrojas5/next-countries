@@ -3,10 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "flagcdn.com/w320",
-      },
+      new URL("https://flagcdn.com/w320/**"),
+      new URL("https://upload.wikimedia.org/**"),
     ],
   },
 };
